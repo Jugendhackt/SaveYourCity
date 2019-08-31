@@ -30,5 +30,5 @@ func _on_slot_released(slot):
 	print(slot)
 	if slot.canPlace(selectedCard, "A"):
 		selectedCard.move(slot.position)
-		slot.place(selectedCard)
+		slot.place(selectedCard, "A")
 		selectedCard = null

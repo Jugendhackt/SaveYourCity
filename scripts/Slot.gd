@@ -17,14 +17,13 @@ func init(type, player):
 func canPlace(card, player):
 	return (self.player == player and type == card.type) or (occupant and occupant.cardName == card.cardName and stack < maxStackSize) 
 
-func place(card):
+func place(card, player):
 	if !occupant:
 		occupant = card
 	else:
 		stack += 1
-	card.onPlace()
+	card.onPlace(player)
 
 func _on_MouseArea_input_event(viewport, event, shape_idx):
 	if event.is_action_released("game_click"):
-		print("Activated slot")
 		emit_signal("slot_released", self)

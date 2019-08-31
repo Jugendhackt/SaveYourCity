@@ -14,9 +14,10 @@ func move(target):
 	moveTween.start()
 
 func onPlace(player):
-	get_parent().get_node("Player" + player).people += effects.x
-	get_parent().get_node("Player" + player).air += effects.y
-	get_parent().get_node("Player" + player).energy += effects.z
+	print("Player" + player)
+	get_parent().get_parent().get_node("Player" + player).people += effects.x
+	get_parent().get_parent().get_node("Player" + player).air += effects.y
+	get_parent().get_parent().get_node("Player" + player).energy += effects.z
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:

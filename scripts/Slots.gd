@@ -21,7 +21,6 @@ func _ready():
 func addSlot(type, player):
 	var slot = load("res://scenes/Slot.tscn").instance()
 	slot.init(type, player)
-	print(slot.get_texture().get_size().x)
 	slot.position = Vector2(xOff + (padding.x + slot.get_texture().get_size().x * slot.transform.get_scale().x) * slots.size(), position.y + padding.y)
 	add_child(slot)
 	slots.append(slot)
