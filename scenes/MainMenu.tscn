@@ -1,3 +1,36 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Pictures/background.jpg" type="Texture" id=1]
 
 [node name="MainMenu" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = 2.04865
+margin_right = 1024.0
+margin_bottom = 602.049
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 413.188
+margin_top = 253.652
+margin_right = 613.188
+margin_bottom = 331.652
+rect_pivot_offset = Vector2( 1137.12, -252.213 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 414.762
+margin_top = 352.142
+margin_right = 616.762
+margin_bottom = 432.142
+text = "OPTIONS"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 411.238
+margin_top = 154.811
+margin_right = 613.238
+margin_bottom = 234.811
+text = "VERLASSEN"
