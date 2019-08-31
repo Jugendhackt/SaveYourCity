@@ -4,8 +4,8 @@
 [ext_resource path="res://interface/counter/label_bg.png" type="Texture" id=2]
 [ext_resource path="res://interface/InhabitantsBar/label_HP.png" type="Texture" id=3]
 [ext_resource path="res://interface/theme/default_theme.tres" type="Theme" id=4]
-[ext_resource path="res://interface/InhabitantsBar/bg.png" type="Texture" id=5]
-[ext_resource path="res://interface/InhabitantsBar/fill.png" type="Texture" id=6]
+[ext_resource path="res://interface/barsImgs/luft.png" type="Texture" id=5]
+[ext_resource path="res://interface/barsImgs/luft fill.png" type="Texture" id=6]
 [ext_resource path="res://interface/InhabitantsBar/texture_progress.gd" type="Script" id=7]
 
 [sub_resource type="Animation" id=1]

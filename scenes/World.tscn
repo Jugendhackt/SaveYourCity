@@ -30,3 +30,4 @@ editor/display_folded = true
 visible = false
 
 [node name="Interface" parent="." instance=ExtResource( 7 )]
+rect_scale = Vector2( 0.6, 0.6 )
