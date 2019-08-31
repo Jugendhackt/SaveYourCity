@@ -23,13 +23,9 @@ func _ready():
 
 func _on_card_clicked(card):
 	if canPlay:
-		print("Clicked card:")
-		print(card)
 		selectedCard = card
 
 func _on_slot_released(slot):
-	print("Released on slot:")
-	print(slot)
 	if selectedCard and slot.canPlace(selectedCard, "A"):
 		playerTurn(slot)
 
