@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/background_options.png" type="Texture" id=1]
+[ext_resource path="res://sprites/480px-Speaker_Icon.svg.png" type="Texture" id=2]
+[ext_resource path="res://scripts/MuteUnmuteButton.gd" type="Script" id=3]
+[ext_resource path="res://scenes/AudioStreamPlayer.tscn" type="PackedScene" id=4]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends AudioStreamPlayer
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[node name="OptionsScene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1021.0
+margin_bottom = 594.0
+texture = ExtResource( 1 )
+
+[node name="MuteUnmuteButton" type="Button" parent="."]
+margin_left = 252.131
+margin_top = 52.2049
+margin_right = 744.131
+margin_bottom = 538.205
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 4 )]
+script = SubResource( 1 )
