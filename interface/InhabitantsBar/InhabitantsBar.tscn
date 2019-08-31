@@ -8,7 +8,6 @@
 [ext_resource path="res://interface/InhabitantsBar/fill.png" type="Texture" id=6]
 [ext_resource path="res://interface/InhabitantsBar/texture_progress.gd" type="Script" id=7]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "SETUP"
 length = 0.01

@@ -19,10 +19,16 @@ func onPlace(player):
 	call(onPlaceFunc, player)
 
 func on_place(player):
-	get_parent().get_parent().get_node("Player" + player).people += effects.x
-	get_parent().get_parent().get_node("Player" + player).air += effects.y
-	get_parent().get_parent().get_node("Player" + player).energy += effects.z
-	#TODO: update bars
+	var getPlayer = get_parent().get_parent().get_node("Player" + player)
+	var interface = get_parent().get_parent().get_node("Interface" + player)
+	
+	getPlayer.people += effects.x
+	getPlayer.air += effects.y
+	getPlayer.energy += effects.z
+	
+	interface.get_node("Bars/InhabitantsBar").updateInhabitants(getPlayer.people)
+	interface.get_node("Bars/AirBar").updateAir(getPlayer.air)
+	interface.get_node("Bars/EnergyBar").updateEnergy(getPlayer.energy)
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:
