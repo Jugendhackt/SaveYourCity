@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Pictures/background.jpg" type="Texture" id=1]
+[ext_resource path="res://scripts/Play.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Options.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Quit.gd" type="Script" id=4]
 
 [node name="MainMenu" type="Node2D"]
 
@@ -11,7 +14,15 @@ margin_bottom = 602.049
 texture = ExtResource( 1 )
 expand = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Play" type="Button" parent="."]
+margin_left = 411.238
+margin_top = 154.811
+margin_right = 613.238
+margin_bottom = 234.811
+text = "Play"
+script = ExtResource( 2 )
+
+[node name="Options" type="Button" parent="."]
 margin_left = 413.188
 margin_top = 253.652
 margin_right = 613.188
@@ -19,18 +30,13 @@ margin_bottom = 331.652
 rect_pivot_offset = Vector2( 1137.12, -252.213 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-text = "PLAY"
+text = "Options"
+script = ExtResource( 3 )
 
-[node name="Button2" type="Button" parent="."]
+[node name="Quit" type="Button" parent="."]
 margin_left = 414.762
 margin_top = 352.142
 margin_right = 616.762
 margin_bottom = 432.142
-text = "OPTIONS"
-
-[node name="Button3" type="Button" parent="."]
-margin_left = 411.238
-margin_top = 154.811
-margin_right = 613.238
-margin_bottom = 234.811
-text = "VERLASSEN"
+text = "Quit"
+script = ExtResource( 4 )
