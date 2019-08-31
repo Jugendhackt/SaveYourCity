@@ -9,4 +9,4 @@ func _ready():
 	pass # Replace with function body.
 
 func _pressed():
-	get_tree().change_scene("res://scenes/Card.tscn")
+	get_tree().change_scene("res://scenes/World.tscn")
