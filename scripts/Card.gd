@@ -6,6 +6,8 @@ export var type = "Defensive"
 export var cardName = "Card"
 
 export var effects = Vector3(0, 0, 0)
+export var health = 10
+export var onPlaceFunc = "on_place"
 
 signal card_clicked(card)
 
@@ -14,7 +16,9 @@ func move(target):
 	moveTween.start()
 
 func onPlace(player):
-	print("Player" + player)
+	call(onPlaceFunc, player)
+
+func on_place(player):
 	get_parent().get_parent().get_node("Player" + player).people += effects.x
 	get_parent().get_parent().get_node("Player" + player).air += effects.y
 	get_parent().get_parent().get_node("Player" + player).energy += effects.z
@@ -22,3 +26,7 @@ func onPlace(player):
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:
 		emit_signal("card_clicked", self)
+		
+
+func on_place_attacker(player):
+	pass

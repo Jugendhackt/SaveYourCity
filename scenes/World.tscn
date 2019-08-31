@@ -6,7 +6,7 @@
 [ext_resource path="res://scripts/HandCards.gd" type="Script" id=4]
 [ext_resource path="res://cards/Card.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/Slots.gd" type="Script" id=6]
-[ext_resource path="res://scenes/Slot.tscn" type="PackedScene" id=7]
+[ext_resource path="res://interface/Interface.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=8]
 
 [node name="World" type="Node2D"]
@@ -26,6 +26,7 @@ padding = Vector2( 50, 10 )
 visible = false
 
 [node name="Slots" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
@@ -37,3 +38,6 @@ visible = false
 [node name="PlayerA" parent="." instance=ExtResource( 8 )]
 
 [node name="PlayerB" parent="." instance=ExtResource( 8 )]
+
+[node name="Interface" parent="." instance=ExtResource( 7 )]
+rect_scale = Vector2( 0.6, 0.6 )
