@@ -1,3 +1,4 @@
 *.import/
+sprites/*.imports
 .import/
 **/.DS_Store
