@@ -8,25 +8,26 @@
 [node name="MainMenu" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_top = 2.04865
-margin_right = 1024.0
-margin_bottom = 602.049
+margin_left = 1.9043
+margin_top = -0.490474
+margin_right = 1025.9
+margin_bottom = 599.51
 texture = ExtResource( 1 )
 expand = true
 
 [node name="Play" type="Button" parent="."]
-margin_left = 408.249
-margin_top = 299.127
-margin_right = 610.249
-margin_bottom = 379.127
+margin_left = 407.614
+margin_top = 206.45
+margin_right = 609.614
+margin_bottom = 286.45
 text = "Play"
 script = ExtResource( 2 )
 
 [node name="Options" type="Button" parent="."]
-margin_left = 410.033
-margin_top = 209.618
-margin_right = 610.033
-margin_bottom = 287.618
+margin_left = 407.494
+margin_top = 301.026
+margin_right = 607.494
+margin_bottom = 379.026
 rect_pivot_offset = Vector2( 1137.12, -252.213 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )

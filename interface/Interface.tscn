@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://interface/interface.gd" type="Script" id=1]
+[ext_resource path="res://interface/InhabitantsBar/InhabitantsBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://interface/AirBar/AirBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interface/AirBar/airbar.gd" type="Script" id=4]
+[ext_resource path="res://interface/EnergyBar/EnergyBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interface/EnergyBar/energybar.gd" type="Script" id=6]
+
+[node name="Interface" type="Control"]
+anchor_right = 1.0
+margin_bottom = 151.0
+script = ExtResource( 1 )
+
+[node name="Bars" type="VBoxContainer" parent="."]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 530.0
+margin_bottom = 127.0
+size_flags_horizontal = 3
+
+[node name="InhabitantsBar" parent="Bars" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 550.0
+margin_bottom = 53.0
+
+[node name="AirBar" parent="Bars" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 57.0
+margin_right = 550.0
+margin_bottom = 110.0
+script = ExtResource( 4 )
+
+[node name="EnergyBar" parent="Bars" instance=ExtResource( 5 )]
+margin_left = 0.0
+margin_top = 114.0
+margin_right = 550.0
+margin_bottom = 167.0
+script = ExtResource( 6 )
