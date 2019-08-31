@@ -22,11 +22,12 @@ func on_place(player):
 	get_parent().get_parent().get_node("Player" + player).people += effects.x
 	get_parent().get_parent().get_node("Player" + player).air += effects.y
 	get_parent().get_parent().get_node("Player" + player).energy += effects.z
+	#TODO: update bars
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:
 		emit_signal("card_clicked", self)
-		
+
 
 func on_place_attacker(player):
 	pass

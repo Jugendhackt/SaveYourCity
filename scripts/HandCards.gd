@@ -1,12 +1,13 @@
 extends Node2D
 
 var cards = []
+var selectedCard
 
 export var maxHandSize = 5
 export var padding = Vector2(5, 10)
 export var imageSize = Vector2(64, 128)
 
-var selectedCard
+onready var canPlay = true
 
 onready var slots = get_parent().get_node("Slots")
 
@@ -21,14 +22,30 @@ func _ready():
 
 
 func _on_card_clicked(card):
-	print("Clicked card:")
-	print(card)
-	selectedCard = card
+	if canPlay:
+		print("Clicked card:")
+		print(card)
+		selectedCard = card
 
 func _on_slot_released(slot):
 	print("Released on slot:")
 	print(slot)
-	if slot.canPlace(selectedCard, "A"):
-		selectedCard.move(slot.position)
-		slot.place(selectedCard, "A")
-		selectedCard = null
+	if selectedCard and slot.canPlace(selectedCard, "A"):
+		playerTurn(slot)
+
+func playerTurn(slot):
+	playCard(slot, selectedCard, "A")
+	#TODO: send enemyTurn(slot, selectedCard)
+	selectedCard = null
+
+func playCard(slot, card, player):
+	card.move(slot.position)
+	slot.place(card, player)
+
+func endTurn():
+	canPlay = false
+
+func enemyTurn(slot, card):
+	selectedCard = card
+	playCard(slot, card, "B")
+	canPlay = true

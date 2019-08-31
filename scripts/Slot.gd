@@ -15,7 +15,7 @@ func init(type, player):
 	self.player = player
 
 func canPlace(card, player):
-	return (self.player == player and type == card.type) or (occupant and occupant.cardName == card.cardName and stack < maxStackSize) 
+	return (self.player == player and type == card.type and !occupant) or (occupant and occupant.cardName == card.cardName and stack < maxStackSize) 
 
 func place(card, player):
 	if !occupant:

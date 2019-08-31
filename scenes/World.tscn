@@ -31,6 +31,8 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
+padding = Vector2( 10, 200 )
+xOffStart = 85
 
 [node name="Slot" parent="Slots" instance=ExtResource( 7 )]
 visible = false

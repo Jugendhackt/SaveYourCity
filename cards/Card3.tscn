@@ -2,6 +2,5 @@
 
 [ext_resource path="res://cards/Card.tscn" type="PackedScene" id=1]
 
-[node name="Card2" instance=ExtResource( 1 )]
-modulate = Color( 0.968627, 0, 0, 1 )
-cardName = "Card2"
+[node name="Card3" instance=ExtResource( 1 )]
+cardName = "Card3"
