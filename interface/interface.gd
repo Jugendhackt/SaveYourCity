@@ -12,10 +12,6 @@ func _ready():
 	inhabitantsbar.initialize(100)
 	airbar.initialize(100)
 	energybar.initialize(100)
-	
-	inhabitantsbar.updateInhabitants(25)
-	airbar.updateAir(50)
-	energybar.updateEnergy(75)
 
 #func _on_Health_health_changed(inhabitants):
 #	emit_signal("inhabitants_updated", inhabitants)
