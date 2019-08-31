@@ -14,3 +14,4 @@ So here´s our game explained:
     Soundtracks: 
       -Battleship
       -Solve the Puzzle
+![backgorund game save your city](https://user-images.githubusercontent.com/54740041/64067153-2a2d1f80-cc24-11e9-9f36-83a49230827b.png)
