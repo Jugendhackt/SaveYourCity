@@ -21,7 +21,7 @@ func _ready():
 
 func positionToCard(pos):
 	var cardX = (pos.x - padding.x) / (imageSize.x + padding.x)
-	print(cardX)
+
 	if cardX < 0 or cardX > cards.size():
 		return null
 	else:

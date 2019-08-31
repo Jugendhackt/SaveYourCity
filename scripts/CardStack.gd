@@ -5,8 +5,8 @@ var cards = []
 export var deckSize = 60
 
 onready var possibleCards = [
-"res://cards/card.tscn",
-"res://cards/card2.tscn"
+"res://cards/Card.tscn",
+"res://cards/Card2.tscn"
 ]
 
 func _ready():
