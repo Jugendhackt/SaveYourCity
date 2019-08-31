@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://sprites/backgorund game save your city.png" type="Texture" id=1]
+[ext_resource path="res://sprites/menu_background.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Play.gd" type="Script" id=2]
 [ext_resource path="res://scripts/Options.gd" type="Script" id=3]
 [ext_resource path="res://scripts/Quit.gd" type="Script" id=4]

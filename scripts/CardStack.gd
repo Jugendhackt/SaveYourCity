@@ -10,6 +10,7 @@ onready var possibleCards = [
 ]
 
 func _ready():
+	randomize()
 	for i in range(deckSize):
 		cards.append(possibleCards[rand_range(0, possibleCards.size())])
 

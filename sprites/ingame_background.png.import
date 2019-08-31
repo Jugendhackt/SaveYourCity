@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backgorund game save your city.png-98545fb61eaffc5684db6252617b65ea.stex"
+path="res://.import/ingame_background.png-f56fcca2bd7587aee0a3411d5cd36478.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/backgorund game save your city.png"
-dest_files=[ "res://.import/backgorund game save your city.png-98545fb61eaffc5684db6252617b65ea.stex" ]
+source_file="res://sprites/ingame_background.png"
+dest_files=[ "res://.import/ingame_background.png-f56fcca2bd7587aee0a3411d5cd36478.stex" ]
 
 [params]
 

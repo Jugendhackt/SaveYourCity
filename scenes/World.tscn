@@ -1,29 +1,42 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://scenes/CardStack.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scripts/CardStack.gd" type="Script" id=2]
-[ext_resource path="res://scripts/HandCards.gd" type="Script" id=3]
-[ext_resource path="res://cards/Card.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Slots.gd" type="Script" id=5]
-[ext_resource path="res://scenes/Slot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sprites/ingame_background.png" type="Texture" id=1]
+[ext_resource path="res://scenes/CardStack.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/CardStack.gd" type="Script" id=3]
+[ext_resource path="res://scripts/HandCards.gd" type="Script" id=4]
+[ext_resource path="res://cards/Card.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Slots.gd" type="Script" id=6]
+[ext_resource path="res://scenes/Slot.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=8]
+[ext_resource path="res://scenes/Player.gd" type="Script" id=9]
 
 [node name="World" type="Node2D"]
 
-[node name="CardStack" parent="." instance=ExtResource( 1 )]
-script = ExtResource( 2 )
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CardStack" parent="." instance=ExtResource( 2 )]
+script = ExtResource( 3 )
 
 [node name="HandCards" type="Node2D" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 padding = Vector2( 50, 10 )
 
-[node name="Card" parent="HandCards" instance=ExtResource( 4 )]
+[node name="Card" parent="HandCards" instance=ExtResource( 5 )]
 visible = false
 
 [node name="Slots" type="Node2D" parent="."]
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Slot" parent="Slots" instance=ExtResource( 6 )]
+[node name="Slot" parent="Slots" instance=ExtResource( 7 )]
 visible = false
+
+[node name="PlayerA" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="PlayerB" type="Node2D" parent="."]
+script = ExtResource( 9 )

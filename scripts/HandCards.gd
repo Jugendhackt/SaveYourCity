@@ -16,22 +16,19 @@ func _ready():
 	print(cards)
 	for i in range(0, cards.size()):
 		cards[i].position = Vector2(padding.x + (imageSize.x + padding.x) * i, get_viewport().get_texture().get_size().y - imageSize.y / 2 - padding.y)
+		cards[i].connect("card_clicked", self, "_on_card_clicked")
 		add_child(cards[i])
-	
 
-func positionToCard(pos):
-	var cardX = (pos.x - padding.x) / (imageSize.x + padding.x)
 
-	if cardX < 0 or cardX > cards.size():
-		return null
-	else:
-		return cards[cardX]
+func _on_card_clicked(card):
+	print("Clicked card:")
+	print(card)
+	selectedCard = card
 
-func _process(delta):
-	if Input.is_action_just_pressed("game_click"):
-		if !selectedCard:
-			selectedCard = positionToCard(get_global_mouse_position())
-			return
-		
-		if selectedCard:
-			selectedCard = null
+func _on_slot_released(slot):
+	print("Released on slot:")
+	print(slot)
+	if slot.canPlace(selectedCard, "A"):
+		selectedCard.move(slot.position)
+		slot.place(selectedCard)
+		selectedCard = null
