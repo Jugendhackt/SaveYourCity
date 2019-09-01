@@ -6,7 +6,10 @@ export var deckSize = 60
 
 onready var possibleCards = [
 "res://cards/CardTree.tscn",
-"res://cards/CardHome.tscn"
+"res://cards/CardHome.tscn",
+"res://cards/CardCoal.tscn",
+"res://cards/CardWall.tscn",
+"res://cards/CardTurbine.tscn",
 ]
 
 func _ready():

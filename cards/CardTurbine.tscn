@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://cards/Card.tscn" type="PackedScene" id=1]
+
+[node name="CardTurbine" instance=ExtResource( 1 )]
+cardName = "CardTurbine"
+effects = Vector3( 0, 0, 10 )
+health = 20

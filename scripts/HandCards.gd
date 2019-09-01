@@ -13,12 +13,17 @@ onready var slots = get_parent().get_node("Slots")
 
 func _ready():
 	while(cards.size() < maxHandSize):
-		cards.append(get_parent().get_node("CardStack").drawCard())
+		drawCard()
+	reorganize()
+
+func drawCard():
+	cards.append(get_parent().get_node("CardStack").drawCard())
+
+func reorganize():
 	for i in range(0, cards.size()):
 		cards[i].position = Vector2(padding.x + (imageSize.x + padding.x) * i, get_viewport().get_texture().get_size().y - imageSize.y / 2 - padding.y)
 		cards[i].connect("card_clicked", self, "_on_card_clicked")
 		add_child(cards[i])
-
 
 func _on_card_clicked(card):
 	if canPlay:
@@ -29,9 +34,11 @@ func _on_slot_released(slot):
 		playerTurn(slot)
 
 func playerTurn(slot):
+	cards.remove(cards.find(selectedCard))
 	playCard(slot, selectedCard, "A")
 	#TODO: send enemyTurn(slot, selectedCard)
 	selectedCard = null
+	endTurn()
 
 func playCard(slot, card, player):
 	card.move(slot.position)
@@ -43,4 +50,6 @@ func endTurn():
 func enemyTurn(slot, card):
 	selectedCard = card
 	playCard(slot, card, "B")
+	drawCard()
+	reorganize()
 	canPlay = true

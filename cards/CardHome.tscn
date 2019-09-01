@@ -3,9 +3,10 @@
 [ext_resource path="res://cards/Card.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/haus.png" type="Texture" id=2]
 
-[node name="CardHome" index="0" instance=ExtResource( 1 )]
-cardName = "Card3"
+[node name="CardHome" instance=ExtResource( 1 )]
+cardName = "CardHome"
 effects = Vector3( 10, -5, -10 )
+health = 15
 
 [node name="Image" parent="." index="0"]
 texture = ExtResource( 2 )

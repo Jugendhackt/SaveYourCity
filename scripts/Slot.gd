@@ -13,6 +13,8 @@ var occupant
 func init(type, player):
 	self.type = type
 	self.player = player
+	if player == "A":
+		set_texture(load("res://sprites/blau.png"))
 
 func canPlace(card, player):
 	return (self.player == player and type == card.type and !occupant) or (occupant and occupant.cardName == card.cardName and stack < maxStackSize) 
