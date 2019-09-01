@@ -4,6 +4,6 @@ export var hosting = false
 
 func _ready():
 	if hosting:
-		$Network.create_server("Player1")
+		$Network.create_server()
 	else:
-		$Network.connect_to_server("Player2")
+		$Network.connect_to_server()
