@@ -13,7 +13,9 @@ func updateInhabitants(new_inhabitants):
 	animate_value(current_inhabitants, new_inhabitants)
 	update_count_text(new_inhabitants)
 	current_inhabitants = new_inhabitants
-
+	rpc("_update_inhabitants", current_inhabitants)
+	
+	
 func animate_value(start, end):
 	$Tween.interpolate_property($TextureProgress, "value", start, end, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Tween.interpolate_method(self, "update_count_text", start, end, 0.5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
