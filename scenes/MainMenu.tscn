@@ -7,10 +7,10 @@
 [node name="MainMenu" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 1.9043
-margin_top = -0.490474
-margin_right = 1025.9
-margin_bottom = 599.51
+margin_left = 3.02008
+margin_top = 0.625371
+margin_right = 1027.02
+margin_bottom = 600.626
 texture = ExtResource( 1 )
 expand = true
 
@@ -29,3 +29,12 @@ margin_right = 611.015
 margin_bottom = 476.175
 text = "Quit"
 script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 22.0
+margin_top = 565.0
+margin_right = 208.0
+margin_bottom = 582.0
+text = "MainMenu made by Conrad"
+align = 1
+uppercase = true
