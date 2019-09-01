@@ -1,3 +1,6 @@
 *.import
 .import/
 *.DS_Store
+*.exe
+*.TMP
+*.pck
