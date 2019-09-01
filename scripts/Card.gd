@@ -10,6 +10,8 @@ export var health = 10
 export var onPlaceFunc = "on_place"
 export var imagePath = "res://sprites/Baum.png"
 
+var placed = false
+
 signal card_clicked(card)
 
 func move(target):
@@ -18,6 +20,7 @@ func move(target):
 
 func onPlace(player):
 	call(onPlaceFunc, player)
+	placed = true
 
 func on_place(player):
 	var getPlayer = get_parent().get_parent().get_node("Player" + player)
@@ -32,7 +35,7 @@ func on_place(player):
 	interface.get_node("Bars/EnergyBar").updateEnergy(getPlayer.energy)
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if event.is_pressed() and event.button_index == BUTTON_LEFT:
+	if event.is_pressed() and event.button_index == BUTTON_LEFT and !placed:
 		emit_signal("card_clicked", self)
 
 
