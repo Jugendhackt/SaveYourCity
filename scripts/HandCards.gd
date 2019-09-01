@@ -14,7 +14,6 @@ onready var slots = get_parent().get_node("Slots")
 func _ready():
 	while(cards.size() < maxHandSize):
 		cards.append(get_parent().get_node("CardStack").drawCard())
-	print(cards)
 	for i in range(0, cards.size()):
 		cards[i].position = Vector2(padding.x + (imageSize.x + padding.x) * i, get_viewport().get_texture().get_size().y - imageSize.y / 2 - padding.y)
 		cards[i].connect("card_clicked", self, "_on_card_clicked")

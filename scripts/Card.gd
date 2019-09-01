@@ -8,6 +8,7 @@ export var cardName = "Card"
 export var effects = Vector3(0, 0, 0)
 export var health = 10
 export var onPlaceFunc = "on_place"
+export var imagePath = "res://sprites/Baum.png"
 
 signal card_clicked(card)
 
