@@ -29,7 +29,6 @@ padding = Vector2( 50, 10 )
 visible = false
 
 [node name="Slots" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true

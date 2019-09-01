@@ -43,16 +43,10 @@ func _on_player_disconnected(id):
 func _on_player_connected(connected_player_id):
 	var local_player_id = get_tree().get_network_unique_id()
 	
-	print(connected_player_id, " connected! Your local is ", local_player_id)
-	rpc("_test", 1324)
 	
 	if not(get_tree().is_network_server()):
 		rpc_id(1, '_request_player_info', local_player_id, connected_player_id)
-		
-		
-remote func _test(test):
-	print("A message has arrived ", test)
-	
+
 remote func _request_player_info(request_from_id, player_id):
 	if get_tree().is_network_server():
 		rpc_id(request_from_id, '_send_player_info', player_id, players[player_id])

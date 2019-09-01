@@ -35,8 +35,13 @@ func _on_slot_released(slot):
 
 func playerTurn(slot):
 	playCard(slot, selectedCard, "A")
-	#TODO: send enemyTurn(slot, selectedCard)
+	rpc("_request_data", slot, selectedCard)
+	
 	selectedCard = null
+	
+remote func _request_data(slot, card):
+	var index = get_parent().get_node("Slots").slots.find(slot)
+	var cardname = get_node("Card").cardName
 
 func playCard(slot, card, player):
 	card.move(slot.position)
