@@ -37,5 +37,12 @@ xOffStart = 85
 
 [node name="PlayerB" parent="." instance=ExtResource( 7 )]
 
-[node name="Interface" parent="." instance=ExtResource( 8 )]
+[node name="InterfaceA" parent="." instance=ExtResource( 7 )]
+rect_scale = Vector2( 0.6, 0.6 )
+
+[node name="InterfaceB" parent="." instance=ExtResource( 7 )]
+margin_left = 660.0
+margin_top = 460.0
+margin_right = 660.0
+margin_bottom = 611.0
 rect_scale = Vector2( 0.6, 0.6 )
