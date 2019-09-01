@@ -31,10 +31,10 @@ text = "Quit"
 script = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 22.0
-margin_top = 565.0
-margin_right = 208.0
-margin_bottom = 582.0
+margin_left = 18.3321
+margin_top = 577.226
+margin_right = 215.332
+margin_bottom = 594.226
 text = "MainMenu made by Conrad"
 align = 1
 uppercase = true
