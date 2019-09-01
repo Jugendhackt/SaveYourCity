@@ -15,6 +15,7 @@ func _ready():
 	
 	inhabitantsbar.updateInhabitants(10)
 	airbar.updateAir(50)
+	energybar.updateEnergy(50)
 
 #func _on_Health_health_changed(inhabitants):
 #	emit_signal("inhabitants_updated", inhabitants)

@@ -35,6 +35,7 @@ text = "Options"
 script = ExtResource( 3 )
 
 [node name="Quit" type="Button" parent="."]
+visible = false
 margin_left = 409.015
 margin_top = 396.175
 margin_right = 611.015
