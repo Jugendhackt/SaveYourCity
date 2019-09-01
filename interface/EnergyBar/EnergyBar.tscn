@@ -2,12 +2,11 @@
 
 [ext_resource path="res://interface/InhabitantsBar/inhabitantsbar.gd" type="Script" id=1]
 [ext_resource path="res://interface/counter/label_bg.png" type="Texture" id=2]
-[ext_resource path="res://interface/InhabitantsBar/label_HP.png" type="Texture" id=3]
+[ext_resource path="res://icons/Energie_ICON.png" type="Texture" id=3]
 [ext_resource path="res://interface/theme/default_theme.tres" type="Theme" id=4]
-[ext_resource path="res://interface/InhabitantsBar/bg.png" type="Texture" id=5]
-[ext_resource path="res://interface/InhabitantsBar/fill.png" type="Texture" id=6]
+[ext_resource path="res://interface/barsImgs/energie.png" type="Texture" id=5]
+[ext_resource path="res://interface/barsImgs/energie fill.png" type="Texture" id=6]
 [ext_resource path="res://interface/InhabitantsBar/texture_progress.gd" type="Script" id=7]
-
 
 [sub_resource type="Animation" id=1]
 resource_name = "SETUP"
@@ -95,9 +94,11 @@ texture = ExtResource( 2 )
 [node name="Title" type="TextureRect" parent="Count"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -20.5
-margin_right = 49.0
-margin_bottom = 19.5
+margin_left = -2.0
+margin_top = -31.5
+margin_right = 3022.0
+margin_bottom = 4000.5
+rect_scale = Vector2( 0.015, 0.015 )
 texture = ExtResource( 3 )
 stretch_mode = 4
 

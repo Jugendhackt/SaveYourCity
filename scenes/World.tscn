@@ -26,6 +26,7 @@ padding = Vector2( 50, 10 )
 visible = false
 
 [node name="Slots" type="Node2D" parent="."]
+
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
@@ -45,4 +46,5 @@ margin_left = 660.0
 margin_top = 470.0
 margin_right = 660.0
 margin_bottom = 621.0
+
 rect_scale = Vector2( 0.6, 0.6 )

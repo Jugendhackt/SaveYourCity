@@ -23,18 +23,18 @@ size_flags_horizontal = 3
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 550.0
-margin_bottom = 53.0
+margin_bottom = 52.0
 
 [node name="AirBar" parent="Bars" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 57.0
+margin_top = 56.0
 margin_right = 550.0
-margin_bottom = 110.0
+margin_bottom = 108.0
 script = ExtResource( 4 )
 
 [node name="EnergyBar" parent="Bars" instance=ExtResource( 5 )]
 margin_left = 0.0
-margin_top = 114.0
+margin_top = 112.0
 margin_right = 550.0
-margin_bottom = 167.0
+margin_bottom = 164.0
 script = ExtResource( 6 )
