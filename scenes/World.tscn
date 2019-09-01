@@ -53,4 +53,3 @@ rect_scale = Vector2( 0.6, 0.6 )
 
 [node name="Network" type="Node" parent="."]
 script = ExtResource( 10 )
-DEFAULT_IP = "172.16.108.5"

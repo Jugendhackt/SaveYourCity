@@ -23,11 +23,12 @@ func connect_to_server():
 	peer.create_client(DEFAULT_IP, DEFAULT_PORT)
 	get_tree().set_network_peer(peer)
 
+
 func _connected_to_server():
-	pass
+	print("Connected to Server!")
 
 func _on_player_disconnected(id):
-	pass
+	print("Player disconnected")
 
 func _on_player_connected(connected_player_id):
-	pass
+	print("Player connected")

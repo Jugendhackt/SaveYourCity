@@ -35,7 +35,7 @@ func on_place(player):
 	interface.get_node("Bars/EnergyBar").updateEnergy(getPlayer.energy)
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if event.is_pressed() and event.button_index == BUTTON_LEFT and !placed:
+	if event.is_pressed() and event.get("button_index") and event.button_index == BUTTON_LEFT and !placed:
 		emit_signal("card_clicked", self)
 
 

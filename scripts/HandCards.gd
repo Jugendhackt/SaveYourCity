@@ -7,7 +7,7 @@ export var maxHandSize = 5
 export var padding = Vector2(5, 10)
 export var imageSize = Vector2(64, 128)
 
-onready var canPlay = true
+onready var canPlay = get_parent().hosting
 
 onready var slots = get_parent().get_node("Slots")
 
@@ -35,26 +35,34 @@ func _on_slot_released(slot):
 
 func playerTurn(slot):
 	cards.remove(cards.find(selectedCard))
-	playCard(slot, selectedCard, "A")
-	rpc("_request_data", slot, selectedCard)
+	playCard(slot, selectedCard, "A", true)
+	
+	rpc("send_turn", get_parent().get_node("Slots").slots.find(slot), selectedCard.cardName)
 	
 	selectedCard = null
 	endTurn()
-	
-remote func _request_data(slot, card):
-	var index = get_parent().get_node("Slots").slots.find(slot)
-	var cardname = get_node("Card").cardName
 
-func playCard(slot, card, player):
-	card.move(slot.position)
+remote func send_turn(slot, card):
+	print("Sent turn:")
+	print(slot)
+	print(card)
+	var cardObj = get_parent().get_node("CardStack").createCard("res://cards/" + card + ".tscn")
+	var slotObj = get_parent().get_node("Slots").slots[get_parent().get_node("Slots").slots.size() - slot - 1]
+	enemyTurn(slotObj, cardObj)
+
+func playCard(slot, card, player, moveTween):
+	if moveTween:
+		card.move(slot.position)
+	else:
+		card.position = slot.position
 	slot.place(card, player)
 
 func endTurn():
 	canPlay = false
 
 func enemyTurn(slot, card):
-	selectedCard = card
-	playCard(slot, card, "B")
+	add_child(card)
+	playCard(slot, card, "B", false)
 	drawCard()
 	reorganize()
 	canPlay = true
