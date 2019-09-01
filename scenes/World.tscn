@@ -7,12 +7,13 @@
 [ext_resource path="res://scripts/HandCards.gd" type="Script" id=5]
 [ext_resource path="res://cards/Card.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Slots.gd" type="Script" id=7]
-[ext_resource path="res://interface/Interface.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://interface/Interface.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/Network.gd" type="Script" id=10]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
+hosting = true
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -36,14 +37,14 @@ __meta__ = {
 padding = Vector2( 10, 200 )
 xOffStart = 85
 
-[node name="PlayerA" parent="." instance=ExtResource( 9 )]
+[node name="PlayerA" parent="." instance=ExtResource( 8 )]
 
-[node name="PlayerB" parent="." instance=ExtResource( 9 )]
+[node name="PlayerB" parent="." instance=ExtResource( 8 )]
 
-[node name="InterfaceA" parent="." instance=ExtResource( 8 )]
+[node name="InterfaceA" parent="." instance=ExtResource( 9 )]
 rect_scale = Vector2( 0.6, 0.6 )
 
-[node name="InterfaceB" parent="." instance=ExtResource( 8 )]
+[node name="InterfaceB" parent="." instance=ExtResource( 9 )]
 margin_left = 660.0
 margin_top = 470.0
 margin_right = 660.0
@@ -52,3 +53,4 @@ rect_scale = Vector2( 0.6, 0.6 )
 
 [node name="Network" type="Node" parent="."]
 script = ExtResource( 10 )
+DEFAULT_IP = "172.16.108.5"

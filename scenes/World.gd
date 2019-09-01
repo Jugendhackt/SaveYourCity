@@ -1,5 +1,9 @@
 extends Node2D
 
+export var hosting = false
+
 func _ready():
-	$Network.create_server("Player1")
-	#$Network.connect_to_server("Player2")
+	if hosting:
+		$Network.create_server("Player1")
+	else:
+		$Network.connect_to_server("Player2")
