@@ -13,7 +13,6 @@
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
-hosting = true
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -53,3 +52,5 @@ rect_scale = Vector2( 0.6, 0.6 )
 
 [node name="Network" type="Node" parent="."]
 script = ExtResource( 10 )
+DEFAULT_PORT = 6000
+DEFAULT_IP = "192.168.137.105"

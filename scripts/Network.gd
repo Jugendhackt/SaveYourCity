@@ -1,8 +1,8 @@
 extends Node
 
 #const DEFAULT_IP = '172.16.108.5'
-const DEFAULT_PORT = 31400
 
+export var DEFAULT_PORT = 80
 export var DEFAULT_IP = '127.0.0.1'
 
 signal player_disconnected
